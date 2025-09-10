@@ -160,7 +160,8 @@ export class DarkslideElement extends HTMLElement {
 	}
 
 	show (e) {
-		this.image.src = (this.current = e).src;
+		this.current = e;
+		this.image.src = e.dataset.dsTarget ?? e.src;
 	}
 
 	toggle (e) {
