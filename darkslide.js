@@ -38,8 +38,8 @@ export class DarkslideElement extends HTMLElement {
 					cursor: zoom-out;
 					flex-grow: 1;
 					height: 100%;
-					/*object-fit: scale-down;*/
 					overflow: auto;
+					object-fit: contain;
 				}
 				:host div {
 					display: flex;
