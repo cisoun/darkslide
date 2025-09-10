@@ -1,0 +1,32 @@
+{
+  "name": "darkslide",
+  "version": "0.0.0",
+  "description": "Simple & straightforward photos slideshow.",
+  "keywords": [
+    "diaporama",
+    "slideshow",
+    "photos"
+  ],
+  "homepage": "https://github.com/cisoun/darkslide#readme",
+  "bugs": {
+    "url": "https://github.com/cisoun/darkslide/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cisoun/darkslide.git"
+  },
+  "license": "The Unlicense",
+  "author": "Cyriaque 'cisoun' Skrapits",
+  "type": "module",
+  "main": "darkslide.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/esbuild darkslide.js --outdir=demo --watch --servedir=demo",
+    "build": "./node_modules/.bin/esbuild darkslide.js --minify --format=esm --outdir=build"
+  },
+  "exports": {
+    ".": "./darkslide.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  }
+}
