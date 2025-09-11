@@ -18,15 +18,15 @@ export class DarkslideElement extends HTMLElement {
 					color: light-dark(var(--fg), var(--bg));
 					display: flex;
 					flex-direction: column;
-					height: calc(100% - var(--gap));
+					height: 100vh;
 					left: 0;
 					opacity: 0;
-					padding: var(--gap);
+					padding: var(--gap) var(--gap) 0 var(--gap);
 					position: fixed;
 					top: 0;
 					transition: opacity 0.2s;
 					visibility: hidden;
-					width: calc(100% - 2 * var(--gap));
+					width: 100vw;
 					z-index: 1;
 				}
 				:host([theme="auto"]) { color-scheme: light dark; }
