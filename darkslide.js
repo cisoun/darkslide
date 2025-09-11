@@ -165,10 +165,10 @@ export class DarkslideElement extends HTMLElement {
 	}
 
 	toggle (e) {
-		const visible = this.classList.toggle('active');
-		if (visible && e) {
+		if (e) {
 			this.show(e.srcElement);
 		}
+		this.classList.toggle('active');
 	}
 }
 
