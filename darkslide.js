@@ -1,5 +1,7 @@
 export class DarkslideElement extends HTMLElement {
-	constructor(source, {theme = 'auto'}) {
+	constructor(source, {
+		theme = 'auto' // light, dark, auto
+	}) {
 		super();
 
 		this.setAttribute('theme', theme);
@@ -104,18 +106,20 @@ export class DarkslideElement extends HTMLElement {
 		this.onclick = this.toggle.bind(this);
 
 		this.ontouchstart = (e) => {
-			if (e.changedTouches.length > 1)
+			if (e.changedTouches.length > 1) {
 				return;
+			}
 			this.touchX = e.changedTouches[0].clientX;
 		};
 
 		this.ontouchend = (e) => {
-			if (e.changedTouches.length > 1)
+			if (e.changedTouches.length > 1) {
 				return;
-			else if (e.changedTouches[0].clientX - this.touchX > +50)
+			} else if (e.changedTouches[0].clientX - this.touchX > +50) {
 				this.previous();
-			else if (e.changedTouches[0].clientX - this.touchX < -50)
+			} else if (e.changedTouches[0].clientX - this.touchX < -50) {
 				this.next();
+			}
 		};
 
 		// Initialize click handl of actions.
