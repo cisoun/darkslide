@@ -20,8 +20,8 @@
   "type": "module",
   "main": "darkslide.js",
   "scripts": {
-    "dev": "./node_modules/.bin/esbuild darkslide.js --outdir=demo --watch --servedir=demo",
-    "build": "./node_modules/.bin/esbuild darkslide.js --minify --format=esm --outdir=build"
+    "dev": "esbuild demo/index.html darkslide.js --loader:.html=text --outdir=demo --watch --servedir=demo",
+    "build": "esbuild darkslide.js --minify --format=esm --outdir=build"
   },
   "exports": {
     ".": "./darkslide.js"
