@@ -25,6 +25,7 @@ export class DarkslideElement extends HTMLElement {
 					position: fixed;
 					top: 0;
 					transition: opacity 0.2s;
+					user-select: none;
 					visibility: hidden;
 					width: 100%;
 					z-index: 1;
