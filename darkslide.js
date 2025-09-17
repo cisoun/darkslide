@@ -15,6 +15,7 @@ export class DarkslideElement extends HTMLElement {
 					--fg: #000e;
 					--gap: 3vw;
 					background-color: light-dark(var(--bg), var(--fg));
+					box-sizing: border-box;
 					color: light-dark(var(--fg), var(--bg));
 					display: flex;
 					flex-direction: column;
