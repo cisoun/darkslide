@@ -18,7 +18,7 @@ export class DarkslideElement extends HTMLElement {
 					color: light-dark(var(--fg), var(--bg));
 					display: flex;
 					flex-direction: column;
-					height: 100vh;
+					height: 100%;
 					left: 0;
 					opacity: 0;
 					padding: var(--gap) var(--gap) 0 var(--gap);
@@ -26,7 +26,7 @@ export class DarkslideElement extends HTMLElement {
 					top: 0;
 					transition: opacity 0.2s;
 					visibility: hidden;
-					width: 100vw;
+					width: 100%;
 					z-index: 1;
 				}
 				:host([theme="auto"]) { color-scheme: light dark; }
@@ -62,6 +62,11 @@ export class DarkslideElement extends HTMLElement {
 					stroke-width: 0.4;
 					stroke: currentColor;
 					width: 2rem;
+				}
+				@media only screen and (max-width: 600px) {
+					:host div a {
+						width: 100%;
+					}
 				}
 			</style>
 			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
